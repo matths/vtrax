@@ -1,38 +1,40 @@
 {
-	"name": "vtrax",
-	"version": "0.0.1",
-	"description": "just a vue experiment to track time with typescript, pug, stylus, material design components",
-	"main": "index.js",
-	"scripts": {
-		"dev": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' webpack",
-		"dev-server": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' webpack-dev-server"
-	},
-	"author": {
-		"name": "Matthias Dittgen",
-		"url": "https://github.com/matths"
-	},
-	"license": "MIT",
-	"dependencies": {
-		"vue": "^2.5.13",
-		"vue-router": "^3.0.1"
-	},
-	"devDependencies": {
-		"@types/html-webpack-plugin": "^2.30.1",
-		"@types/node": "^9.3.0",
-		"@types/webpack": "^3.8.3",
-		"css-loader": "^0.28.9",
-		"html-webpack-plugin": "^2.30.1",
-		"pug": "^2.0.0-rc.4",
-		"pug-loader": "^2.3.0",
-		"style-loader": "^0.20.1",
-		"stylus": "^0.54.5",
-		"stylus-loader": "^3.0.1",
-		"ts-loader": "^3.3.1",
-		"ts-node": "^4.1.0",
-		"typescript": "^2.6.2",
-		"vue-loader": "^13.7.0",
-		"vue-template-compiler": "^2.5.13",
-		"webpack": "^3.10.0",
-		"webpack-dev-server": "^2.11.1"
-	}
+  "name": "vue-ts-pug-stylus-template",
+  "version": "1.0.0",
+  "description": "vue template that uses typescript, pug and stylus all over",
+  "main": "index.js",
+  "scripts": {
+    "dev": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' webpack",
+    "dev-server": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' webpack-dev-server"
+  },
+  "author": {
+    "name": "Matthias Dittgen",
+    "url": "https://github.com/matths"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "vue": "^2.5.13",
+    "vue-material": "^1.0.0-beta-8",
+    "vue-router": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/html-webpack-plugin": "^2.30.1",
+    "@types/node": "^9.3.0",
+    "@types/vue-material": "git+https://github.com/calebsander/vue-material-types.git",
+    "@types/webpack": "^3.8.3",
+    "css-loader": "^0.28.9",
+    "html-webpack-plugin": "^2.30.1",
+    "pug": "^2.0.0-rc.4",
+    "pug-loader": "^2.3.0",
+    "style-loader": "^0.20.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "ts-loader": "^3.3.1",
+    "ts-node": "^4.1.0",
+    "typescript": "^2.6.2",
+    "vue-loader": "^13.7.0",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  }
 }
