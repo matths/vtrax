@@ -1,30 +1,40 @@
 <template lang="pug">
 div#app
-	h2 My App
-	ul
-		li
-			router-link(to="/") Screen A
-		li
-			router-link(to="alternative") Screen B
-	router-view
+	v-app
+		v-navigation-drawer(app fixed clipped)
+			v-list(dense)
+				v-list-tile(v-for="item in items" :key="item.title" :to="item.link")
+					v-list-tile-action
+						v-icon {{ item.icon }}
+					v-list-tile-content
+						v-list-tile-title {{ item.title }}
+		v-toolbar(app dark fixed clipped-left color="primary")
+			v-toolbar-side-icon
+			v-toolbar-title(class="white--text") My App
+		v-content
+			v-container(fluid)
+				v-fade-transition(mode="out-in")
+					router-view
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 
 export default Vue.extend({
-	name: 'app'
+	name: 'app',
+	data: function() {
+		return {
+			items: [
+				{ link: '/', title: 'Screen A', icon: 'dashboard' },
+				{ link: '/alternative', title: 'Screen B', icon: 'dashboard' }
+			]
+		};
+	}
 });
 </script>
 
 <style lang="stylus">
-body
-	margin 0
-	padding 0
-	background-color #ccc
 
-h2
-	margin-top 0
-	padding 5px 12px
-	background-color #fff
+@import '../../node_modules/vuetify/src/stylus/main.styl'
+
 </style>

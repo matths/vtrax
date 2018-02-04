@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import Vuetify from 'vuetify';
 import App from './components/App.vue';
 import router from './router';
 
@@ -8,6 +9,8 @@ if (loader!=null && loader.firstChild) {
 }
 
 Vue.config.productionTip = false;
+
+Vue.use(Vuetify);
 
 const app = new Vue({
 	el: '#app',
